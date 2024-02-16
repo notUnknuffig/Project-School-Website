@@ -3,21 +3,35 @@
     box-sizing: border-box;
 }
 
+:root {
+    --scroll: 0;
+    --clr-main-1: aliceblue;
+}
+
 .menu {
     position: sticky;
+    top: 0px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     background-color: aliceblue;
+    transform: translateY(calc(1% * min((max( var(--scroll), 30 ) * 5 - 250), 0)));
 }
 
-.menu a {
+.menu div {
+   padding: 20px;
+   transition: transform 0.2s ease;
+}
+
+.menu div:hover {
+    transform: translateY(-10px);
+}
+
+.menu div a {
     text-decoration: none;
-    margin: 20px;
     font-size: 20px;
     font-weight: 700;
     font-family: sans-serif;
-
 }
 
 .menu .active {
