@@ -1,3 +1,27 @@
-body {
-    height: 300vh;
+section {
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+}
+
+.section-1 {
+    z-index: 2;
+    background-color: azure;
+    position: sticky;
+    top: 0px;
+    transform: translateY(calc(-1% * min( ( max( var(--scroll), 70 ) - 70 ) * 100 / 30, 100 )));
+}
+
+.section-2 {
+    z-index: 1;
+    background-color: pink;
+    position: sticky;
+    top: 0px;
+    transform: translateY(calc(-1% * min( ( max( var(--scroll), 170 ) - 170 ) * 100 / 30, 100 )));
+}
+
+.section-3 {
+    background-color: white;
+    position: sticky;
+    top: 0px;
 }
