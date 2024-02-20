@@ -1,7 +1,43 @@
 .section-2 {
     z-index: 1;
-    background-color: var(--clr-background);
     position: sticky;
     top: 0px;
     transform: translateY(calc(-1% * min( ( max( var(--scroll), 160 ) - 160 ) * 100 / 40, 100 )));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 .headline {
+    position: relative;
+    left: 20%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-2 .headline h1 {
+    font-size: 3vw;
+    color: var(--clr-main);
+}
+
+.section-2 .headline h2 {
+    font-size: 2vw;
+    color: azure;
+}
+
+.section-2 .headline button {
+    position: relative;
+    top: 30px;
+    border: 5px solid var(--clr-background-accent);
+    border-radius: 10px;
+    background-color: var(--clr-background-accent);
+    padding: 10px;
+    font-size: 1.6vw;
+    color: var(--clr-main);
+    transition: top 0.2s ease;
+}
+
+.section-2 .headline button:hover {
+    top: 40px;
+    cursor: pointer;
 }

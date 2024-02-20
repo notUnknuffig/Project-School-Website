@@ -1,0 +1,19 @@
+*, *::after, *::before {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --scroll: 0;
+
+    /*Color*/
+    --clr-main: white;
+    --value-clr: 0;
+    --clr-menubar: hsl(var(--value-clr), 30%, 70%);
+    --clr-background-accent: hsl(var(--value-clr), 30%, 60%);
+    --clr-background: hsl(var(--value-clr), 30%, 10%);
+}
+
+body {
+    background-color: var(--clr-background);
+}
