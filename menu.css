@@ -6,6 +6,18 @@
 :root {
     --scroll: 0;
     --clr-main-1: aliceblue;
+    /*Section - 1*/
+    --clr-s1-background: hsl(227, 26%, 38%);
+    --clr-s1-background-accent: hsl(226, 33%, 66%);
+    --clr-s1-menubar: hsl(208, 30%, 54%);
+    /*Section - 2*/
+    --clr-s2-background: hsl(309, 26%, 38%);
+    --clr-s2-background-accent: hsl(307, 33%, 66%);
+    --clr-s2-menubar: hsl(300, 30%, 54%);
+    /*Section - 3*/
+    --clr-s3-background: hsl(181, 26%, 38%);
+    --clr-s3-background-accent: hsl(172, 33%, 66%);
+    --clr-s3-menubar: hsl(178, 30%, 54%);
 }
 
 .menu {
@@ -15,7 +27,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: rgb(103, 141, 174);
+    background-color: var(--clr-s1-menubar);
     border-bottom: 5px solid black;
     transform: translateY(calc(1% * min((max( var(--scroll), 50 ) * 3 - 250), 0)));
 }

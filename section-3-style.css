@@ -1,5 +1,5 @@
 .section-3 {
-    background-color: white;
+    background-color: var(--clr-s3-background);
     position: sticky;
     top: 0px;
 }

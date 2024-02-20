@@ -6,7 +6,7 @@ section {
 
 .section-1 {
     z-index: 2;
-    background-color: #47537a;
+    background-color: var(--clr-s1-background);
     position: sticky;
     top: 0px;
     transform: translateY(calc(-1% * min( ( max( var(--scroll), 70 ) - 70 ) * 100 / 30, 100 )));
@@ -15,11 +15,29 @@ section {
     align-items: center;
 }
 
-.section-1 h1 {
+.section-1 .headline {
     position: relative;
     left: 20%;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-1 .headline h1 {
     font-size: 45px;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-1 .headline h2 {
+    font-size: 35px;
+    color: azure;
+}
+
+.section-1 .headline button {
+    position: relative;
+    top: 50px;
+    border: 5px solid var(--clr-s1-background-accent);
+    border-radius: 10px;
+    background-color: var(--clr-s1-background);
+    font-size: 35px;
+    color: white;
 }
