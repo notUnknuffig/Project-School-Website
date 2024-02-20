@@ -6,10 +6,10 @@ section {
 
 .section-1 {
     z-index: 2;
-    background-color: var(--clr-s1-background);
+    background-color: var(--clr-background);
     position: sticky;
     top: 0px;
-    transform: translateY(calc(-1% * min( ( max( var(--scroll), 70 ) - 70 ) * 100 / 30, 100 )));
+    transform: translateY(calc(-1% * min( ( max( var(--scroll), 60 ) - 60 ) * 100 / 40, 100 )));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@ section {
 
 .section-1 .headline h1 {
     font-size: 45px;
-    color: white;
+    color: var(--clr-main);
 }
 
 .section-1 .headline h2 {
@@ -37,7 +37,14 @@ section {
     top: 50px;
     border: 5px solid var(--clr-s1-background-accent);
     border-radius: 10px;
-    background-color: var(--clr-s1-background);
+    background-color: var(--clr-s1-background-accent);
+    padding: 10px;
     font-size: 35px;
-    color: white;
+    color: var(--clr-main);
+    transition: top 0.2s ease;
+}
+
+.section-1 .headline button:hover {
+    top: 40px;
+    cursor: pointer;
 }
