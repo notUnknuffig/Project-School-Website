@@ -1,0 +1,7 @@
+.section-2 {
+    z-index: 1;
+    background-color: pink;
+    position: sticky;
+    top: 0px;
+    transform: translateY(calc(-1% * min( ( max( var(--scroll), 170 ) - 170 ) * 100 / 30, 100 )));
+}

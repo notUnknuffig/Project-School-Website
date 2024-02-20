@@ -15,12 +15,14 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: aliceblue;
-    transform: translateY(calc(1% * min((max( var(--scroll), 30 ) * 5 - 250), 0)));
+    background-color: rgb(103, 141, 174);
+    border-bottom: 5px solid black;
+    transform: translateY(calc(1% * min((max( var(--scroll), 50 ) * 3 - 250), 0)));
 }
 
 .menu div {
    padding: 20px;
+   color: #ffffff;
    transition: transform 0.2s ease;
 }
 
@@ -36,5 +38,5 @@
 }
 
 .menu .active {
-    color: blue;
+    color: lightblue;
 }
