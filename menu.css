@@ -33,19 +33,16 @@
     color: var(--clr-main);
 }
 
-.menu-icon::before {
+.menu-icon {
+    position: absolute;
     display: none;
-}
-
-.menu-icon::before {
-    position: fixed;
     top: 5px;
     right: 10px;
     width:50px; 
     height:50px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .menu {
         display: none;
     }

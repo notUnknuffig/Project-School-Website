@@ -4,25 +4,25 @@
     top: 0px;
     transform: translateY(calc(-1% * min( ( max( var(--scroll), 160 ) - 160 ) * 100 / 40, 100 )));
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .section-2 .headline {
     position: relative;
-    left: 20%;
+    right: 10%;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .section-2 .headline h1 {
-    font-size: 3vw;
+    font-size: 40px;
     color: var(--clr-main);
 }
 
 .section-2 .headline h2 {
-    font-size: 2vw;
-    color: azure;
+    font-size: 25px;
+    color: var(--clr-main);
 }
 
 .section-2 .headline button {
@@ -32,7 +32,7 @@
     border-radius: 10px;
     background-color: var(--clr-background-accent);
     padding: 10px;
-    font-size: 1.6vw;
+    font-size: 20px;
     color: var(--clr-main);
     transition: top 0.2s ease;
 }
@@ -40,4 +40,25 @@
 .section-2 .headline button:hover {
     top: 40px;
     cursor: pointer;
+}
+
+.section-2 .image-container {
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    width: 60vw;
+    height: 60vw;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:800px) {
+    .section-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-2 .headline {
+        right: inherit;
+    }
 }
