@@ -9,16 +9,14 @@
         <link rel="stylesheet" href="section-3-style.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="menu.css">
-        <script src="scrollevent.js"></script>
+        <script src="menu.js"></script>
     </head>
     <body>
         <nav class="menu">
-            <div class="menu-item"><a href="index.html" class="active">| Home |</a></div>
-            <div class="menu-item"><a href="project-list.html">| Projekte |</a></div>
-            <div class="menu-item"><a href="documentation.html">| Dokumentation |</a></div>
-            <div class="menu-icon">
-                <img src="img/menu-icon.svg" alt="Icon">
-            </div>
+            <button class="menu-button" id="menu-button" onclick="revealMenu()"></button>
+            <div class="menu-item" id="menu-item"><a href="index.html" class="active">| Home |</a></div>
+            <div class="menu-item" id="menu-item"><a href="project-list.html">| Projekte |</a></div>
+            <div class="menu-item" id="menu-item"><a href="documentation.html">| Dokumentation |</a></div>
         </nav>
         <div class="content">
             <section class="section-1">
@@ -29,7 +27,7 @@
                     <h1>Roboterarm</h1>
                     <h2>Gesteuert mit</h2>
                     <h2>Inverse Kinematik</h2>
-                    <button>Erfahre Mehr</button>
+                    <a>Erfahre Mehr</a>
                 </div>
             </section>
             <section class="section-3">

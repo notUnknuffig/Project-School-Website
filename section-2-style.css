@@ -25,7 +25,7 @@
     color: var(--clr-main);
 }
 
-.section-2 .headline button {
+.section-2 .headline a {
     position: relative;
     top: 30px;
     border: 5px solid var(--clr-background-accent);
@@ -37,7 +37,7 @@
     transition: top 0.2s ease;
 }
 
-.section-2 .headline button:hover {
+.section-2 .headline a:hover {
     top: 40px;
     cursor: pointer;
 }
@@ -55,8 +55,8 @@
 
 .section-2 .image-container img {
     /* width: calc(60vw * min( max(var(--scroll) - 80, 0), 20) / 20); */
-    height: calc(60vw * (min( max(var(--scroll) - 80, 4), 20) / 20) * (min(max(var(--scroll)- 180,0), 20)));
-    opacity: calc(100%* (min( max(var(--scroll) - 80, 0), 20) / 20));
+    height: calc(40vw + 20vw * (min( max(var(--scroll) - 60, 0), 40) / 40) - 20vw * (min( max(var(--scroll) - 160, 0), 20) / 20));
+    opacity: calc(100% * (min( max(var(--scroll) - 60, 0), 40) / 40) - 100% * (min( max(var(--scroll) - 160, 0), 20) / 20));
 }
 
 @media (max-width:800px) {

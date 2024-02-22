@@ -6,12 +6,13 @@
     display: flex;
     justify-content: space-around;
     background-color: hsl(var(--value-clr), 30%, 70%);
-    border-bottom: 5px solid var(--clr-main);
     transform: translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)));
 }
 
 .menu-item {
    padding: 15px;
+   margin-left: 20px;
+   margin-right: 20px;
    color: var(--clr-main);
    transition: transform 0.2s ease;
 }
@@ -33,10 +34,13 @@
     color: var(--clr-main);
 }
 
-.menu-icon {
-    position: absolute;
+.menu-button {
+    background-image: url("img/menu-icon.svg");
+    background-color: transparent;
+    border: 5px solid transparent;
+    position: fixed;
     display: none;
-    top: 5px;
+    top: 10px;
     right: 10px;
     width:50px; 
     height:50px;
@@ -44,9 +48,16 @@
 
 @media (max-width: 800px) {
     .menu {
-        display: none;
+        flex-direction: column;
     }
-    .menu-icon {
+    .menu-item {
+        position: relative;
+        left: 10%;
+        display: none;
+        margin: 10px;
+        width: fit-content;
+    }
+    .menu-button {
         display: block;
     }
 }
