@@ -50,6 +50,13 @@
     height: 60vw;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.section-2 .image-container img {
+    /* width: calc(60vw * min( max(var(--scroll) - 80, 0), 20) / 20); */
+    height: calc(60vw * (min( max(var(--scroll) - 80, 4), 20) / 20) * (min(max(var(--scroll)- 180,0), 20)));
+    opacity: calc(100%* (min( max(var(--scroll) - 80, 0), 20) / 20));
 }
 
 @media (max-width:800px) {
