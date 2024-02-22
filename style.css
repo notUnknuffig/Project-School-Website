@@ -4,16 +4,19 @@
 }
 
 :root {
+    /*Scroll Vars*/
     --scroll: 0;
+    --value-clr: 0;
+    --clr-home-menubar: hsl(var(--value-clr), 30%, 70%);
+    --clr-home-background-accent: hsl(var(--value-clr), 30%, 60%);
+    --clr-home-background: hsl(var(--value-clr), 30%, 10%);
 
     /*Color*/
     --clr-main: white;
-    --value-clr: 0;
-    --clr-menubar: hsl(var(--value-clr), 30%, 70%);
-    --clr-background-accent: hsl(var(--value-clr), 30%, 60%);
-    --clr-background: hsl(var(--value-clr), 30%, 10%);
-}
 
-body {
-    background-color: var(--clr-background);
+    /*Pastel Purple Combination: pastpel */
+    --clr-deep-pastpel: #2A2F4F;
+    --clr-pastpel: #917FB3;
+    --clr-light-pastpel: #E5BEEC;
+    --clr-pastpel-accent: #FDE2F3;
 }

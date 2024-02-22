@@ -1,3 +1,29 @@
+:root {
+    --menu-scroll: calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0));
+}
+
+body {
+    background-color: var(--clr-home-background);
+}
+
+section {
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+}
+
+.menu-item-container {
+    background-color: var(--clr-home-menubar);
+    transform: translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)));
+}
+
+.section-1 {
+    z-index: 2;
+    position: sticky;
+    top: 0px;
+    transform: translateY(calc(-1% * min( ( max( var(--scroll), 60 ) - 60 ) * 100 / 40, 100 )));
+}
+
 .section-2 {
     z-index: 1;
     position: sticky;
@@ -29,9 +55,9 @@
     position: relative;
     text-decoration: none;
     top: 30px;
-    border: 5px solid var(--clr-background-accent);
+    border: 5px solid var(--clr-home-background-accent);
     border-radius: 10px;
-    background-color: var(--clr-background-accent);
+    background-color: var(--clr-home-background-accent);
     padding: 10px;
     font-size: 20px;
     color: var(--clr-main);
@@ -75,4 +101,10 @@
     .section-2 .image-container img {
         height: calc(70vw + 20vw * (min( max(var(--scroll) - 60, 0), 40) / 40) - 20vw * (min( max(var(--scroll) - 160, 0), 20) / 20));
     }
+}
+
+.section-3 {
+    background-color: var(--clr-home-background);
+    position: sticky;
+    top: 0px;
 }

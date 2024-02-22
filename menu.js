@@ -32,7 +32,7 @@ function scrollVar() {
         menu_open = false;
         menu[0].style.visibility = "visible"
         menu[0].style.animation = "none"
-        menu[0].style.transform = "translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)))";
+        menu[0].style.transform = "translateY(var(--menu-scroll, 0))";
         menuButton.style.backgroundImage = "url('img/exit-icon.svg')";
     }
 }

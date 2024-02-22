@@ -10,8 +10,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: hsla(var(--value-clr), 30%, 70%, 70%);
-    transform: translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)));
 }
 
 .menu-item {
@@ -29,7 +27,7 @@
 .menu-item a {
     text-decoration: none;
     color: var(--clr-main);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     font-family: sans-serif;
 }
@@ -77,7 +75,6 @@
     .menu-item {
         position: relative;
         left: 10%;
-        margin: 10px;
         width: fit-content;
     }
     .menu-button {
