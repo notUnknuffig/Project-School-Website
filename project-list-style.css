@@ -90,4 +90,11 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--clr-light-pastpel);
     border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-3 .extendable a:hover {
+    position: relative;
+    transform: translateY(5px);
+    background-color: var(--clr-pastpel-accent) ;
 }
