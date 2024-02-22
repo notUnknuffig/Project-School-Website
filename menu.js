@@ -1,6 +1,8 @@
 window.addEventListener("scroll", scrollVar)
 window.addEventListener("resize", scrollVar)
 
+let menu_open = false
+
 function scrollVar() {
     const htmlDocument = document.documentElement
     const scrollPercent = Math.min((htmlDocument.scrollTop / htmlDocument.clientHeight) * 100, 200)
@@ -15,43 +17,47 @@ function scrollVar() {
     htmlDocument.style.setProperty("--value-clr", color)
 
     var menuButton = document.getElementById("menu-button");
-    var menuItems = document.getElementsByClassName("menu-item");
+    var menu = document.getElementsByClassName("menu-item-container");
 
     if(htmlDocument.clientWidth <= 800)
     {
-        console.log("Close Menu");
-        for (var i = 0; i < menuItems.length; i++) {
-            menuItems[i].style.display = 'none';
+        if(!menu_open) {
+            menu_open = false;
+            menu[0].style.visibility = "hidden"
+            menu[0].style.transform = "translateY(0)"
+            menuButton.style.backgroundImage = "url('img/menu-icon.svg')";
         }
-        menuButton.style.backgroundImage = "url('img/menu-icon.svg')";
     }
     else {
-        console.log("Open Menu");
-        for (var i = 0; i < menuItems.length; i++) {
-            menuItems[i].style.display = 'block';
-        }
+        menu_open = false;
+        menu[0].style.visibility = "visible"
+        menu[0].style.animation = "none"
+        menu[0].style.transform = "translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)))";
         menuButton.style.backgroundImage = "url('img/exit-icon.svg')";
     }
 }
 
 function revealMenu() {
-
-    console.log("Menu...");
     var menuButton = document.getElementById("menu-button");
-    var menuItems = document.getElementsByClassName("menu-item");
-
-    if (menuItems[0].style.display === "none") {
-        console.log("Open Menu");
-        for (var i = 0; i < menuItems.length; i++) {
-            menuItems[i].style.display = 'block';
-        }
-        
+    var menu = document.getElementsByClassName("menu-item-container");
+    
+    if (menu[0].style.visibility == "hidden") {
+        menu_open = true;
+        menu[0].style.animation = "open-close-menubar 0.5s ease-in-out forwards"
+        menu[0].addEventListener("animationend", function() {
+            menu[0].style.animation = "idle 0.1s"
+            menu[0].style.visibility = "visible"
+        })
+        menu[0].style.transform = "translateY(0)"
         menuButton.style.backgroundImage = "url('img/exit-icon.svg')";
     } else {
-        console.log("Close Menu");
-        for (var i = 0; i < menuItems.length; i++) {
-            menuItems[i].style.display = 'none';
-        }
+        menu_open = false;
+        menu[0].style.animation = "open-close-menubar 0.5s ease-in-out reverse backwards"
+        menu[0].addEventListener("animationend", function() {
+            menu[0].style.animation = "idle 0.1s"
+            menu[0].style.visibility = "hidden"
+        })
+        menu[0].style.transform = "translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)))";
         menuButton.style.backgroundImage = "url('img/menu-icon.svg')";
     }
 }
