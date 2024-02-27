@@ -1,0 +1,16 @@
+.section {
+    width: 100%;
+    height: 100svh;
+}
+
+#triangle-calc {
+    background-color: red;
+}
+
+#json-reader {
+    background-color: blue;
+}
+
+#color-converter {
+    background-color: green;
+}

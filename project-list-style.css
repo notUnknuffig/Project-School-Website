@@ -78,7 +78,7 @@ h2 {
 
 }
 
-.project-3 .extendable a {
+.project-3 .extendable button {
     width: 100%;
     height: 40px;
     margin-top: 20px;
@@ -89,6 +89,7 @@ h2 {
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--clr-light-pastpel);
+    border: 0px;
     border-radius: 20px;
     transition: all 0.2s ease-in-out;
 }
@@ -97,4 +98,12 @@ h2 {
     position: relative;
     transform: translateY(5px);
     background-color: var(--clr-pastpel-accent) ;
+}
+
+.popup {
+    position: absolute;
+    top: 0px;
+    width: 70svw;
+    height: 70svh;
+    visibility: hidden;
 }
