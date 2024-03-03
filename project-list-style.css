@@ -117,6 +117,7 @@ p {
     width: 70svw;
     height: 70svh;
     display: none;
+    border: 5px solid var(--clr-light-pastpel);
     border-radius: 15px;
     background-color: var(--clr-pastpel);
 }

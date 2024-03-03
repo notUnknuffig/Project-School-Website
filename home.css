@@ -1,9 +1,11 @@
 :root {
     --menu-scroll: calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0));
+    --title-characters: 14;
 }
 
 body {
     background-color: var(--clr-home-background);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 section {
@@ -21,14 +23,87 @@ section {
     z-index: 2;
     position: sticky;
     top: 0px;
-    transform: translateY(calc(-1% * min( ( max( var(--scroll), 60 ) - 60 ) * 100 / 40, 100 )));
+    transform: translateY(calc(-1% * min( ( max( var(--scroll), 50 ) - 50 ) * 100 / 50, 100 )));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1 h1 {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: calc(min(8svw, 100px));
+    color: var(--clr-main);
+    position: relative;
+    animation: move-title 0.5s ease 4s forwards;
+}
+
+.section-1 h1::before, .section-1 h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.section-1 h1::before {
+    background-color: var(--clr-home-background);
+    animation: typewriter 2s steps(var(--title-characters)) 1s forwards;
+}
+
+.section-1 h1::after {
+    width: 1.5%;
+    background-color: var(--clr-main);
+    animation: typewriter 2s steps(var(--title-characters)) 1s forwards, typewriter-blink 0.7s steps(1) infinite forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes typewriter-blink {
+    49% {
+        background-color: var(--clr-main);
+    }
+    51% {
+        background-color: transparent;
+    }
+}
+
+@keyframes move-title {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.section-1 p {
+    opacity: 0%;
+    text-align: center;
+    color: var(--clr-main);
+    width: calc(min(900px, 80%));
+    font-size: calc(min(3.2svw, 40px));
+    animation: blend-in 0.4s ease 4.5s forwards;
+}
+
+@keyframes blend-in {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
 
 .section-2 {
     z-index: 1;
     position: sticky;
     top: 0px;
-    transform: translateY(calc(-1% * min( ( max( var(--scroll), 160 ) - 160 ) * 100 / 40, 100 )));
+    transform: translateY(calc(-1% * min( ( max( var(--scroll), 150 ) - 150 ) * 100 / 40, 100 )));
     display: flex;
     justify-content: space-between;
     align-items: center;
