@@ -62,4 +62,25 @@ function revealMenu() {
     }
 }
 
-scrollVar()
+function revealWindow(buttonId) {
+    var windowId = document.getElementById(buttonId).getAttribute("windowID")
+    var window = document.getElementById(windowId);
+    if (window.style.visibility == "hidden") {
+        console.log("window hidden")
+        window.style.animation = "open-close-window 0.5s ease-in-out reverse backwards"
+        window.addEventListener("animationend", function() {
+            window.style.animation = "idle 0.1s"
+            window.style.visibility = "hidden"
+        })
+
+    }
+    else {
+        console.log("window opened")
+
+        window.style.animation = "open-close-window 0.5s ease-in-out forwards"
+        window.addEventListener("animationend", function() {
+            window.style.animation = "idle 0.1s"
+            window.style.visibility = "visible"
+        })
+    }
+}

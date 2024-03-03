@@ -100,10 +100,29 @@ h2 {
     background-color: var(--clr-pastpel-accent) ;
 }
 
-.popup {
-    position: absolute;
+.popup-container {
+    position: fixed;
     top: 0px;
     width: 70svw;
     height: 70svh;
+}
+
+.popup-window {
     visibility: hidden;
+    width: 80svh;
+    height: 80svw;
+    background-color: var(--clr-pastpel);
+}
+
+@keyframes idle {
+    100% {}    
+}
+
+@keyframes open-close-window {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }

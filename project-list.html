@@ -37,11 +37,16 @@
                 <h2>Projekt-Util</h2>
                 <p>Projekt-Util ist eine Reihe an Programmen. Sie umfasst Großzahl an nützlichen und auch weniger nützlichen Werkzeugen. Ein Beispiel hierfür ist ein Python Programm welches den Aufbau und Strukturierung von JSON-Dateien vereinfacht.</p>
                 <div class="extendable">
-                    <a href="/project-03#triangle-calc">Dreiecksrechner</a>
-                    <a href="/project-03#json-reader">JSON-Reader</a>
-                    <a href="/project-03#color-converter">Farbkonverter</a>
+                    <button windowID="popup-tri-calc" onclick="revealWindow(this.id)" id="tricalc-button">Dreiecksrechner</button>
+                    <button windowID="popup-json-reader" onclick="revealWindow(this.id)" id="json-reader">JSON-Reader</button>
+                    <button windowID="popup-color-conv" onclick="revealWindow(this.id)" id="color-conv">Farbkonverter</button>
                 </div>
             </div>
+        </div>
+        <div class="popup-container">
+            <div class="popup-window" id="popup-tri-calc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos soluta veritatis expedita aliquam vel sunt placeat voluptatibus fugit ratione quisquam laudantium, consequuntur fugiat tempora vitae error quam quia quasi?</div>
+            <div class="popup-window" id="popup-json-reader">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos soluta veritatis expedita aliquam vel sunt placeat voluptatibus fugit ratione quisquam laudantium, consequuntur fugiat tempora vitae error quam quia quasi?</div>
+            <div class="popup-window" id="popup-color-conv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos soluta veritatis expedita aliquam vel sunt placeat voluptatibus fugit ratione quisquam laudantium, consequuntur fugiat tempora vitae error quam quia quasi?</div>
         </div>
     </div>
 </body>
