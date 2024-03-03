@@ -37,9 +37,12 @@ function scrollVar() {
     }
 }
 
+scrollVar()
+
 function revealMenu() {
     var menuButton = document.getElementById("menu-button");
     var menu = document.getElementsByClassName("menu-item-container");
+    
     
     if (menu[0].style.visibility == "hidden") {
         menu_open = true;
@@ -47,6 +50,7 @@ function revealMenu() {
         menu[0].addEventListener("animationend", function() {
             menu[0].style.animation = "idle 0.1s"
             menu[0].style.visibility = "visible"
+            menu[0].style.pointerEvents = "all"
         })
         menu[0].style.transform = "translateY(0)"
         menuButton.style.backgroundImage = "url('img/exit-icon.svg')";
@@ -56,31 +60,9 @@ function revealMenu() {
         menu[0].addEventListener("animationend", function() {
             menu[0].style.animation = "idle 0.1s"
             menu[0].style.visibility = "hidden"
+            menu[0].style.pointerEvents = "none"
         })
         menu[0].style.transform = "translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)))";
         menuButton.style.backgroundImage = "url('img/menu-icon.svg')";
-    }
-}
-
-function revealWindow(buttonId) {
-    var windowId = document.getElementById(buttonId).getAttribute("windowID")
-    var window = document.getElementById(windowId);
-    if (window.style.visibility == "hidden") {
-        console.log("window hidden")
-        window.style.animation = "open-close-window 0.5s ease-in-out reverse backwards"
-        window.addEventListener("animationend", function() {
-            window.style.animation = "idle 0.1s"
-            window.style.visibility = "hidden"
-        })
-
-    }
-    else {
-        console.log("window opened")
-
-        window.style.animation = "open-close-window 0.5s ease-in-out forwards"
-        window.addEventListener("animationend", function() {
-            window.style.animation = "idle 0.1s"
-            window.style.visibility = "visible"
-        })
     }
 }

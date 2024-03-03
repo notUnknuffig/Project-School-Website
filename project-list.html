@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="project-list-style.css">
     <title>| Projekte |</title>
     <script src="menu.js"></script>
+    <script src="project-list.js"></script>
 </head>
 <body>
     <nav class="menu" id="main-menu">
@@ -20,6 +21,23 @@
         <button class="menu-button" id="menu-button" onclick="revealMenu()"></button>
     </nav>
     <div class="container">
+        <div class="popup-container">
+            <div class="popup-window" id="popup-tri-calc">
+                <button class="close-popup-button" windowState="close" windowID="popup-tri-calc" onclick="windowDisplay(this.id)" id="tri-calc-close"></button>
+                <h1>Dreiecksrechner</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptate reiciendis eos. Et magni officia dolores mollitia harum in totam amet, enim nesciunt aperiam, cum recusandae, optio sapiente sequi aut!</p>
+            </div>
+            <div class="popup-window" id="popup-json-reader">
+                <button class="close-popup-button" windowState="close" windowID="popup-json-reader" onclick="windowDisplay(this.id)" id="json-reader-close"></button>
+                <h1>JSON-Editor</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptate reiciendis eos. Et magni officia dolores mollitia harum in totam amet, enim nesciunt aperiam, cum recusandae, optio sapiente sequi aut!</p>
+            </div>
+            <div class="popup-window" id="popup-color-conv">
+                <button class="close-popup-button" windowState="close" windowID="popup-color-conv" onclick="windowDisplay(this.id)" id="color-conv-close"></button>
+                <h1>Farbkonverter</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptate reiciendis eos. Et magni officia dolores mollitia harum in totam amet, enim nesciunt aperiam, cum recusandae, optio sapiente sequi aut!</p>
+            </div>
+        </div>
         <h1></h1>
         <div class="project-grid">
             <div class="project-1 project-grid-item">
@@ -32,21 +50,17 @@
             <div class="project-2 project-grid-item">
                 <h2>Projekt-R</h2>
                 <p>In diesem Projekt verwenden wir einen Raspberry Pi und Python, um eine Roboterarm zu steuern. Der Roboterarm verfügt über 3-Freiheitsgrade und einen Finray-Greifmechanismus. Ein Bildanalyse Programm verarbeitet die eingaben einer Kamera, um die Position des zu greifenden Objekts zu erkennen. Um den Roboter zu bewegen, berechnen wir mit Hilfe von Inverser Kinematik, die Motorpositionen.</p>
+                <div class="project-2-image"></div>
             </div>
             <div class="project-3 project-grid-item">
                 <h2>Projekt-Util</h2>
                 <p>Projekt-Util ist eine Reihe an Programmen. Sie umfasst Großzahl an nützlichen und auch weniger nützlichen Werkzeugen. Ein Beispiel hierfür ist ein Python Programm welches den Aufbau und Strukturierung von JSON-Dateien vereinfacht.</p>
                 <div class="extendable">
-                    <button windowID="popup-tri-calc" onclick="revealWindow(this.id)" id="tricalc-button">Dreiecksrechner</button>
-                    <button windowID="popup-json-reader" onclick="revealWindow(this.id)" id="json-reader">JSON-Reader</button>
-                    <button windowID="popup-color-conv" onclick="revealWindow(this.id)" id="color-conv">Farbkonverter</button>
+                    <button windowState="open" windowID="popup-tri-calc" onclick="windowDisplay(this.id)" id="tri-calc-open"><span class="unclickable-button">Dreiecksrechner</span></button>
+                    <button windowState="open" windowID="popup-json-reader" onclick="windowDisplay(this.id)" id="json-reader-open"><span class="unclickable-button">JSON-Editor</span></button>
+                    <button windowState="open" windowID="popup-color-conv" onclick="windowDisplay(this.id)" id="color-conv-open"><span class="unclickable-button">Farbkonverter</span></button>
                 </div>
             </div>
-        </div>
-        <div class="popup-container">
-            <div class="popup-window" id="popup-tri-calc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos soluta veritatis expedita aliquam vel sunt placeat voluptatibus fugit ratione quisquam laudantium, consequuntur fugiat tempora vitae error quam quia quasi?</div>
-            <div class="popup-window" id="popup-json-reader">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos soluta veritatis expedita aliquam vel sunt placeat voluptatibus fugit ratione quisquam laudantium, consequuntur fugiat tempora vitae error quam quia quasi?</div>
-            <div class="popup-window" id="popup-color-conv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos soluta veritatis expedita aliquam vel sunt placeat voluptatibus fugit ratione quisquam laudantium, consequuntur fugiat tempora vitae error quam quia quasi?</div>
         </div>
     </div>
 </body>
