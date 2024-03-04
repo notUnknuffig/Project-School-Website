@@ -4,7 +4,6 @@ body {
 
 h1, h2, p{
     color: var(--clr-main);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h2 {
@@ -100,7 +99,6 @@ p {
     font-weight: 700;
     color: var(--clr-main);
     background-color: var(--clr-pastpel-intense);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: 0px;
     border-radius: 20px;
 }
@@ -110,7 +108,7 @@ p {
 }
 
 .popup-window {
-    padding: 30px;
+    padding: 40px;
     position: fixed;
     top: 15%;
     left: 15%;
@@ -135,6 +133,37 @@ p {
     height:50px;
 }
 
+
+.popup-grid-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.popup-grid-item {
+    padding: 10px;
+    width: 100%;
+}
+
+.popup-grid-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-grid-image img {
+    width: calc(min(30svw, 500px));
+}
+
+#popup-json-reader img {
+    border-radius: 15px;
+}
+
 @media (max-width:800px) {
     .project-grid {
         grid-template-areas: 'project-1 project-1 project-1 project-1 project-1' 'project-2 project-2 project-2 project-2 project-2' 'project-3 project-3 project-3 project-3 project-3';
@@ -144,5 +173,11 @@ p {
         left: 7.5%;
         width: 85svw;
         height: 85svh;
+    }
+    .popup-grid-container {
+        grid-template-columns: 1fr;
+    }
+    .popup-grid-image img {
+        width: 30vmax;
     }
 }
