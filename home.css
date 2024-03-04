@@ -1,6 +1,8 @@
 :root {
     --menu-scroll: calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0));
     --title-characters: 14;
+    --img-menu-icon: url("img/menu-icon.svg");
+    --img-exit-icon: url("img/exit-icon.svg");
 }
 
 body {
@@ -11,7 +13,8 @@ body {
 section {
     width: 100%;
     height: 100dvh;
-    position: relative;
+    position: sticky;
+    top: 0px;
 }
 
 .menu-item-container {
@@ -21,8 +24,6 @@ section {
 
 .section-1 {
     z-index: 2;
-    position: sticky;
-    top: 0px;
     transform: translateY(calc(-1% * min( ( max( var(--scroll), 50 ) - 50 ) * 100 / 50, 100 )));
     display: flex;
     flex-direction: column;
@@ -101,8 +102,6 @@ section {
 
 .section-2 {
     z-index: 1;
-    position: sticky;
-    top: 0px;
     transform: translateY(calc(-1% * min( ( max( var(--scroll), 150 ) - 150 ) * 100 / 40, 100 )));
     display: flex;
     justify-content: space-between;
@@ -189,6 +188,4 @@ section {
 
 .section-3 {
     background-color: var(--clr-home-background);
-    position: sticky;
-    top: 0px;
 }

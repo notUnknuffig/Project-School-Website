@@ -30,7 +30,7 @@ function menuResize() {
             menu_open = false;
             menu[0].style.visibility = "hidden"
             menu[0].style.transform = "translateY(0)"
-            menuButton.style.backgroundImage = "url('../img/menu-icon.svg')";
+            menuButton.style.backgroundImage = "var(--img-menu-icon)";
         }
     }
     else {
@@ -38,7 +38,7 @@ function menuResize() {
         menu[0].style.visibility = "visible"
         menu[0].style.animation = "none"
         menu[0].style.transform = "translateY(var(--menu-scroll, 0))";
-        menuButton.style.backgroundImage = "url('../img/exit-icon.svg')";
+        menuButton.style.backgroundImage = "var(--img-exit-icon)";
     }
 }
 
@@ -47,7 +47,6 @@ scrollVar()
 function revealMenu() {
     var menuButton = document.getElementById("menu-button");
     var menu = document.getElementsByClassName("menu-item-container");
-    
     
     if (menu[0].style.visibility == "hidden") {
         menu_open = true;
@@ -58,7 +57,7 @@ function revealMenu() {
             menu[0].style.pointerEvents = "all"
         })
         menu[0].style.transform = "translateY(0)"
-        menuButton.style.backgroundImage = "url('../img/exit-icon.svg')";
+        menuButton.style.backgroundImage = "var(--img-exit-icon)";
     } else {
         menu_open = false;
         menu[0].style.animation = "open-close-menubar 0.5s ease-in-out reverse backwards"
@@ -68,6 +67,6 @@ function revealMenu() {
             menu[0].style.pointerEvents = "none"
         })
         menu[0].style.transform = "translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)))";
-        menuButton.style.backgroundImage = "url('../img/menu-icon.svg')";
+        menuButton.style.backgroundImage = "var(--img-menu-icon)";
     }
 }

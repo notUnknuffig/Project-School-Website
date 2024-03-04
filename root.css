@@ -4,9 +4,12 @@
 }
 
 :root {
-    /*Scroll Vars*/
     --scroll: 0;
     --value-clr: 0;
+
+    --img-menu-icon: url("../img/menu-icon.svg");
+    --img-exit-icon: url("../img/exit-icon.svg");
+
     --clr-home-menubar: hsl(var(--value-clr), 30%, 65%);
     --clr-home-background-accent: hsl(var(--value-clr), 30%, 68%);
     --clr-home-background: hsl(var(--value-clr), 30%, 75%);
@@ -16,13 +19,12 @@
     --clr-shadow: rgba(0, 0, 0, 0.1);
 
     /*Pastel Purple Combination: pastpel */
-    --clr-pastpel-background: #f7e6ff;
+    --clr-pastpel-background: #faeeff;
     --clr-pastpel-normal: #f3deff;
     --clr-pastpel-intense: #eecdff;
     --clr-pastpel-accent: #d9abf2;
     --clr-pastpel-overlay: #d9bae978;
 }
-
 
 @media (prefers-color-scheme: dark) {
     :root {
