@@ -41,7 +41,7 @@
 
 .menu-button {
     cursor: pointer;
-    background-image: url("img/menu-icon.svg");
+    background-image: url("../img/menu-icon.svg");
     background-color: transparent;
     border: 5px solid transparent;
     position: fixed;

@@ -57,7 +57,7 @@ section {
 .section-1 h1::after {
     width: 1.5%;
     background-color: var(--clr-main);
-    animation: typewriter 2s steps(var(--title-characters)) 1s forwards, typewriter-blink 0.7s steps(1) infinite forwards;
+    animation: typewriter 2s steps(var(--title-characters)) 1s forwards, typewriter-blink 0.6s steps(1) 0s infinite, blend-in 0.2s 5s reverse forwards;
 }
 
 @keyframes typewriter {
@@ -117,12 +117,12 @@ section {
 }
 
 .section-2 .headline h1 {
-    font-size: 40px;
+    font-size: calc(min(5svw,70px));
     color: var(--clr-main);
 }
 
 .section-2 .headline h2 {
-    font-size: 25px;
+    font-size: calc(min(3svw,45px));
     color: var(--clr-main);
 }
 
@@ -134,7 +134,7 @@ section {
     border-radius: 10px;
     background-color: var(--clr-home-background-accent);
     padding: 10px;
-    font-size: 20px;
+    font-size: calc(min(3svw,30px));
     color: var(--clr-main);
     transition: top 0.2s ease;
 }
@@ -168,6 +168,15 @@ section {
     }
     .section-2 .headline {
         right: inherit;
+    }
+    .section-2 .headline h1 {
+        font-size: 40px;
+    }
+    .section-2 .headline h2 {
+        font-size: 30px;
+    }
+    .section-2 .headline a {
+        font-size: 25px;
     }
     .section-2 .image-container {
         width: 80vw;

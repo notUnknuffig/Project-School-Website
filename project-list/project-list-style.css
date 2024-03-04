@@ -1,5 +1,5 @@
 body {
-    background-color: var(--clr-deep-pastpel);
+    background-color: var(--clr-pastpel-background);
 }
 
 h1, h2, p{
@@ -18,7 +18,7 @@ p {
 }
 
 .menu-item-container {
-    background-color: var(--clr-pastpel);
+    background-color: var(--clr-pastpel-normal);
 }
 
 .container {
@@ -40,7 +40,7 @@ p {
 
 .project-1 {
     grid-area: project-1;
-    background-color: var(--clr-pastpel);
+    background-color: var(--clr-pastpel-normal);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -61,25 +61,25 @@ p {
 
 .project-2 {
     grid-area: project-2;
-    background-color: var(--clr-pastpel);
+    background-color: var(--clr-pastpel-normal);
 }
 
 .project-2-image {
     border: 5px solid var(--clr-pastpel-accent);
-    background-color: var(--clr-light-pastpel);
+    background-color: var(--clr-pastpel-intense);
     margin: 20px;
     border-radius: 15px;
     height: 300px;
     background-position: center;
     background-size: 700px;
-    background-image: url("img/RobotorArm.png");
+    background-image: url("../img/RobotorArm.png");
     
 }
 
 
 .project-3 {
     grid-area: project-3;
-    background-color: var(--clr-pastpel);
+    background-color: var(--clr-pastpel-normal);
 }
 
 .project-3 .extendable {
@@ -99,7 +99,7 @@ p {
     font-size: 20px;
     font-weight: 700;
     color: var(--clr-main);
-    background-color: var(--clr-light-pastpel);
+    background-color: var(--clr-pastpel-intense);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: 0px;
     border-radius: 20px;
@@ -117,13 +117,13 @@ p {
     width: 70svw;
     height: 70svh;
     display: none;
-    border: 5px solid var(--clr-light-pastpel);
+    border: 5px solid var(--clr-pastpel-intense);
     border-radius: 15px;
-    background-color: var(--clr-pastpel);
+    background-color: var(--clr-pastpel-normal);
 }
 
 .popup-window .close-popup-button {
-    background-image: url("img/exit-icon.svg");
+    background-image: url("../img/exit-icon.svg");
     background-color: transparent;
     border: 5px solid transparent;
     position: absolute;
