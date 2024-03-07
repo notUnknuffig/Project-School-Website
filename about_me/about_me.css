@@ -1,7 +1,14 @@
+.menu-item-container {
+    background-color: var(--clr-pastlue-normal);
+}
+
 .content {
+    background-color: var(--clr-pastlue-background);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100svw;
+    height: 100svh;
 }
 
 .grid-container {

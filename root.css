@@ -24,6 +24,13 @@
     --clr-pastpel-intense: #eecdff;
     --clr-pastpel-accent: #d9abf2;
     --clr-pastpel-overlay: #d9bae978;
+
+    /*Pastel Blue Combination: pastlue*/
+    --clr-pastlue-background: #f1ffff;
+    --clr-pastlue-normal: #d7f2f6;
+    --clr-pastlue-intense: #bceaef;
+    --clr-pastlue-accent: #a3f3fc;
+    --clr-pastlue-overlay: #CBF1F578;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +47,13 @@
         --clr-pastpel-intense: #8571a8;
         --clr-pastpel-accent: #4d3762;
         --clr-pastpel-overlay: #8571a896;
+
+        /*Pastel Blue Combination: pastlue*/
+        --clr-pastlue-background: #0e4654;
+        --clr-pastlue-normal: #217c8a;
+        --clr-pastlue-intense: #237a84;
+        --clr-pastlue-accent: #3db6c4;
+        --clr-pastlue-overlay: #45ecff78;
     }       
 }
 
