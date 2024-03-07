@@ -20,53 +20,60 @@ function scrollVar() {
     htmlDocument.style.setProperty("--value-clr", color);
 }
 
-function menuResize() {
+function menuResize(isOnLoad) {
     var menuButton = document.getElementById("menu-button");
-    var menu = document.getElementsByClassName("menu-item-container");
+    var menu = document.getElementById("menu-item-container");
 
     if(htmlDocument.clientWidth <= 800)
     {
         if(!menu_open) {
             menu_open = false;
-            menu[0].style.visibility = "hidden"
-            menu[0].style.transform = "translateY(0)"
+            menu.style.visibility = "hidden"
+            menu.style.transform = "translateY(0)"
+            menuButton.style.backgroundImage = "var(--img-menu-icon)";
+        }
+        else if(isOnLoad) {
+            menu_open = false;
+            menu.style.visibility = "hidden"
+            menu.style.transform = "translateY(0)"
             menuButton.style.backgroundImage = "var(--img-menu-icon)";
         }
     }
     else {
         menu_open = false;
-        menu[0].style.visibility = "visible"
-        menu[0].style.animation = "none"
-        menu[0].style.transform = "translateY(var(--menu-scroll, 0))";
+        menu.style.visibility = "visible"
+        menu.style.animation = "none"
+        menu.style.transform = "translateY(var(--menu-scroll, 0))";
         menuButton.style.backgroundImage = "var(--img-exit-icon)";
     }
 }
 
 scrollVar()
+menuResize(true)
 
 function revealMenu() {
     var menuButton = document.getElementById("menu-button");
-    var menu = document.getElementsByClassName("menu-item-container");
+    var menu = document.getElementById("menu-item-container");
     
-    if (menu[0].style.visibility == "hidden") {
+    if (menu.style.visibility == "hidden") {
         menu_open = true;
-        menu[0].style.animation = "open-close-menubar 0.5s ease-in-out forwards"
-        menu[0].addEventListener("animationend", function() {
-            menu[0].style.animation = "idle 0.1s"
-            menu[0].style.visibility = "visible"
-            menu[0].style.pointerEvents = "all"
+        menu.style.animation = "open-close-menubar 0.5s ease-in-out forwards"
+        menu.addEventListener("animationend", function() {
+            menu.style.animation = "idle 0.1s"
+            menu.style.visibility = "visible"
+            menu.style.pointerEvents = "all"
         })
-        menu[0].style.transform = "translateY(0)"
+        menu.style.transform = "translateY(0)"
         menuButton.style.backgroundImage = "var(--img-exit-icon)";
     } else {
         menu_open = false;
-        menu[0].style.animation = "open-close-menubar 0.5s ease-in-out reverse backwards"
-        menu[0].addEventListener("animationend", function() {
-            menu[0].style.animation = "idle 0.1s"
-            menu[0].style.visibility = "hidden"
-            menu[0].style.pointerEvents = "none"
+        menu.style.animation = "open-close-menubar 0.5s ease-in-out reverse backwards"
+        menu.addEventListener("animationend", function() {
+            menu.style.animation = "idle 0.1s"
+            menu.style.visibility = "hidden"
+            menu.style.pointerEvents = "none"
         })
-        menu[0].style.transform = "translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)))";
+        menu.style.transform = "translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)))";
         menuButton.style.backgroundImage = "var(--img-menu-icon)";
     }
 }

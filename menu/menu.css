@@ -16,6 +16,13 @@
 
 .menu-flex-growth {
     flex-grow: 0.6;
+    overflow: hidden;
+}
+
+.menu-flex-growth img {
+    position: relative;
+    top: 5px;
+    height: 50px;
 }
 
 .menu-item {
@@ -92,5 +99,9 @@
     .menu-button {
         display: block;
         pointer-events: all;
+    }
+    .menu-flex-growth img {
+        top: 10px;
+        left: 50px;
     }
 }

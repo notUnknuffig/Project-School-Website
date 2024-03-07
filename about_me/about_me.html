@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="../root.css">
     <link rel="stylesheet" href="../menu/menu.css">
     <link rel="stylesheet" href="about_me.css">
+
+    <script src="../menu/menu.js"></script>
 </head>
 <body>
     <nav class="menu" id="main-menu">
         <div class="menu-item-container" id="menu-item-container">
-            <div class="menu-item menu-flex-growth"></div>
+            <div class="menu-flex-growth"><img src="../img/LogoCyan.svg" alt="Logo"></div>
             <div class="menu-item"><a href="../index.html">| <span class="menu-item-text">Home</span> |</a></div>
-            <div class="menu-item"><a href="../project-list/">| <span class="menu-item-text">Projekte</span> |</a></div>
+            <div class="menu-item"><a href="../project-list/project-list.html">| <span class="menu-item-text">Projekte</span> |</a></div>
             <div class="menu-item"><a href="../documentation/documentation.html">| <span class="menu-item-text">Dokumentation</span> |</a></div>
             <div class="menu-item"><a href="about_me.html" class="active">| <span class="menu-item-text">About Me</span> |</a></div>
         </div>
@@ -21,12 +23,14 @@
     </nav>
     <div class="content">
         <div class="grid-container">
-            <div class="grid-item about-me-text">
-                <h1>Über Mich</h1>
+            <div class="grid-item about-me">
+                <div class="img-container">
+                    <h1>Über Mich</h1>
+                    <div class="about-me-image"></div>
+                </div>
                 <p>Heyyy! Ich bin ein Schüler, welcher sich gerne mit Informatik auseinander setzt. Von Python, über HTML zu C++, ich teste mich gerne an neue und aufregende Abenteuer heran. Ich habe schon in manchen Wettbewerben teil genommen, jedoch prgrammiere ich sehr gerne ohne Limitationen der Zeit und Projektumfangs.</p>
             </div>
             <div class="grid-item about-me-projects">
-                <p>Bisherige Projekte:</p><a href="https://notUnknuffig.github.io/lolrcb">LoL - Champion/Build Randomizor</a>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
 .grid-container {
     padding: 5%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     gap: 5%;
 }
 
@@ -24,10 +24,54 @@
     border: 5px solid var(--clr-pastlue-accent);
     border-radius: 15px;
     background-color: var(--clr-pastlue-intense);
-    height: 70svh;
 }
 
-.about-me-text h1 {
-    font-weight: 700;
+.about-me {
+    max-width: 60svw;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-me-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    background-color: var(--clr-pastlue-normal);
+    background-image: url("../img/pfp.png");
+    background-position: 25% 32%;
+    border: 3px solid var(--clr-main);
+    border-radius: 50%;
+}
+
+.about-me h1 {
+    width: fit-content;
+    flex-shrink: 1;
+    font-weight: 300;
+    font-size: 90px;
     margin-bottom: 20px;
+}
+
+.about-me p {
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        padding: 0%;
+        grid-template-columns: auto;
+    }
+    .about-me {
+        max-width: none;
+        width: 90svw;
+    }
+    .about-me-text {
+        top: 0px;
+    }
+    .img-container {
+        justify-content: space-between;
+    }
 }
