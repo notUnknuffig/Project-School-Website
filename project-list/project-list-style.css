@@ -110,10 +110,10 @@ p {
 .popup-window {
     padding: 40px;
     position: fixed;
-    top: 15%;
-    left: 15%;
-    width: 70svw;
-    height: 70svh;
+    top: 10%;
+    left: 10%;
+    width: 80svw;
+    height: 80svh;
     display: none;
     border: 5px solid var(--clr-pastpel-intense);
     border-radius: 15px;
@@ -157,7 +157,8 @@ p {
 }
 
 .popup-grid-image img {
-    width: calc(min(30svw, 500px));
+    max-width: calc(min(50svw, 100rem));
+    max-height: calc(min(70svh, 100rem));
 }
 
 #popup-json-reader img {
@@ -178,6 +179,8 @@ p {
         grid-template-columns: 1fr;
     }
     .popup-grid-image img {
-        width: 30vmax;
+        max-height: unset;
+        max-width: unset;
+        width: 30vmax; 
     }
 }

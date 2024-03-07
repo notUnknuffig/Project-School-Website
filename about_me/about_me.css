@@ -12,5 +12,22 @@
 }
 
 .grid-container {
+    padding: 5%;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+}
+
+.grid-item {
+    color: white;
+    padding: 5%;
+    border: 5px solid var(--clr-pastlue-accent);
+    border-radius: 15px;
+    background-color: var(--clr-pastlue-intense);
+    height: 70svh;
+}
+
+.about-me-text h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
 }
