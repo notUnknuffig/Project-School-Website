@@ -60,6 +60,15 @@ section {
     animation: typewriter 2s steps(var(--title-characters)) 1s forwards, typewriter-blink 0.6s steps(1) 0s infinite, blend-in 0.2s 5s reverse forwards;
 }
 
+.section-1 p {
+    opacity: 0%;
+    text-align: center;
+    color: var(--clr-main);
+    width: calc(min(900px, 80%));
+    font-size: calc(min(3.2svw, 40px));
+    animation: blend-in 0.4s ease 4.5s forwards;
+}
+
 @keyframes typewriter {
     to {
         left: 100%;
@@ -81,15 +90,6 @@ section {
     }
 }
 
-.section-1 p {
-    opacity: 0%;
-    text-align: center;
-    color: var(--clr-main);
-    width: calc(min(900px, 80%));
-    font-size: calc(min(3.2svw, 40px));
-    animation: blend-in 0.4s ease 4.5s forwards;
-}
-
 @keyframes blend-in {
     from {
         opacity: 0%;
@@ -99,89 +99,51 @@ section {
     }
 }
 
+/*SECTION-2*/
+
 .section-2 {
     z-index: 1;
     transform: translateY(calc(-1% * min( ( max( var(--scroll), 150 ) - 150 ) * 100 / 40, 100 )));
-    display: flex;
-    justify-content: space-between;
+}
+
+.section-2 .sect-2-grid-container {
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     align-items: center;
 }
 
-.section-2 .headline {
-    position: relative;
-    right: 10%;
-    text-align: center;
-}
-
-.section-2 .headline h1 {
-    font-size: calc(min(5svw,70px));
+.section-2 h1 {
     color: var(--clr-main);
-}
-
-.section-2 .headline h2 {
-    font-size: calc(min(3svw,45px));
-    color: var(--clr-main);
-}
-
-.section-2 .headline a {
-    position: relative;
-    text-decoration: none;
-    top: 30px;
-    border: 5px solid var(--clr-home-background-accent);
-    border-radius: 10px;
-    background-color: var(--clr-home-background-accent);
-    padding: 10px;
-    font-size: calc(min(3svw,30px));
-    color: var(--clr-main);
-    transition: top 0.2s ease;
-}
-
-.section-2 .headline a:hover {
-    top: 40px;
-    cursor: pointer;
 }
 
 .section-2 .image-container {
-    overflow: hidden;
-    position: relative;
-    left: 0px;
-    width: 60vw;
-    height: 60vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    background-image: url("img/RobotorArm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: calc(100% + 100% * (min( max(var(--scroll) - 60, 0), 40) / 40) - 20vw * (min( max(var(--scroll) - 160, 0), 20) / 20));
 }
 
-.section-2 .image-container img {
-    height: calc(40vw + 20vw * (min( max(var(--scroll) - 60, 0), 40) / 40) - 20vw * (min( max(var(--scroll) - 160, 0), 20) / 20));
-    opacity: calc(100% * (min( max(var(--scroll) - 60, 0), 40) / 40) - 100% * (min( max(var(--scroll) - 160, 0), 20) / 20));
+.section-2 .headline {
+    text-align: center;
 }
 
-@media (max-width:800px) {
-    .section-2 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .section-2 .headline {
-        right: inherit;
-    }
-    .section-2 .headline h1 {
-        font-size: 40px;
-    }
-    .section-2 .headline h2 {
-        font-size: 30px;
-    }
-    .section-2 .headline a {
-        font-size: 25px;
-    }
-    .section-2 .image-container {
-        width: 80vw;
-        height: 80vw;
-    }
-    .section-2 .image-container img {
-        height: calc(70vw + 20vw * (min( max(var(--scroll) - 60, 0), 40) / 40) - 20vw * (min( max(var(--scroll) - 160, 0), 20) / 20));
-    }
+.section-2 .main-text {
+    font-size: 65px;
+}
+
+.section-2 .headline a {
+    background-color: var(--clr-home-background-accent);
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    color: var(--clr-main);
+    line-height: 2;
+    font-size: 30px;
+    text-decoration: none;
 }
 
 .section-3 {

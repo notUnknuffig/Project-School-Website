@@ -12,6 +12,7 @@
     flex-direction: row;
     justify-content: space-around;
     padding-right: 15px;
+    box-shadow: 0 0px 15px var(--clr-shadow);
 }
 
 .menu-flex-growth {
@@ -29,23 +30,31 @@
     pointer-events: all;
     padding-top: 15px;
     padding-bottom: 15px;
+    transition: all 0.2s ease;
+}
+
+
+.menu-item a {
+    color: var(--clr-unselected);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.menu-item .active {
     color: var(--clr-main);
-    transition: transform 0.2s ease;
+}
+
+.active .menu-item-text {
+    text-decoration: underline;
 }
 
 .menu-item:hover {
     transform: translateY(-10px);
 }
 
-.menu-item a {
-    text-decoration: none;
-    color: var(--clr-main);
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.active .menu-item-text {
-    text-decoration: underline;
+.menu-item:hover a{
     color: var(--clr-main);
 }
 

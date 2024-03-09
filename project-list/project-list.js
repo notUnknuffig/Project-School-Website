@@ -37,7 +37,7 @@ function openWindow(window) {
     }
     else {
         openWindows.push(window);
-        window.style.display = "block";
+        window.style.display = "grid";
     }
 }
 

@@ -20,8 +20,14 @@ p {
     background-color: var(--clr-pastpel-normal);
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
 .container {
-    padding: 10%;
+    max-width: 2000px;
+    padding: 10% 10% 0% 10%;
 }
 
 .project-grid {
@@ -33,7 +39,7 @@ p {
 
 .project-grid-item {
     padding: 20px;
-    box-shadow: 5px 5px var(--clr-shadow);
+    box-shadow: 5px 1px 5px var(--clr-shadow);
     border-radius: 15px;
     background-color: var(--clr-pastpel-normal);
 }
@@ -105,17 +111,26 @@ p {
     background-color: var(--clr-pastpel-accent);
 }
 
+.popup-container {
+    position: absolute;
+    pointer-events: none;
+    max-width: 1500px;
+    height: 100%;
+    padding: 10%;
+}
+
 .popup-window {
-    padding: 40px;
-    position: fixed;
-    top: 10%;
-    left: 10%;
-    width: 80svw;
-    height: 80svh;
+    position: relative;
+    pointer-events: all;
+    padding: 50px;
     display: none;
     border: 5px solid var(--clr-pastpel-intense);
     border-radius: 15px;
     background-color: var(--clr-pastpel-normal);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup-window .close-popup-button {
@@ -131,32 +146,8 @@ p {
     height:50px;
 }
 
-
-.popup-grid-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.popup-grid-item {
-    padding: 10px;
-    width: 100%;
-}
-
-.popup-grid-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-grid-image img {
-    max-width: calc(min(50svw, 100rem));
-    max-height: calc(min(70svh, 100rem));
+.popup-window img {
+    max-width: 100%;
 }
 
 #popup-json-reader img {
@@ -167,22 +158,16 @@ p {
     grid-area: project-4;
 }
 
+.project-4 a {
+    color: var(--clr-pastpel-intense);
+}
+
+.project-4 a:hover {
+    color: var(--clr-pastpel-accent);
+}
+
 @media (max-width:800px) {
     .project-grid {
         grid-template-areas: 'project-1 project-1 project-1 project-1 project-1' 'project-2 project-2 project-2 project-2 project-2' 'project-3 project-3 project-3 project-3 project-3' 'project-4 project-4 project-4 project-4 project-4';
-    }
-    .popup-window {
-        top: 7.5%;
-        left: 7.5%;
-        width: 85svw;
-        height: 85svh;
-    }
-    .popup-grid-container {
-        grid-template-columns: 1fr;
-    }
-    .popup-grid-image img {
-        max-height: unset;
-        max-width: unset;
-        width: 30vmax; 
     }
 }

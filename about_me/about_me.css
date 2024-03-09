@@ -21,9 +21,9 @@
 .grid-item {
     color: white;
     padding: 5%;
-    border: 5px solid var(--clr-pastlue-accent);
+    border: 5px solid var(--clr-pastlue-intense);
     border-radius: 15px;
-    background-color: var(--clr-pastlue-intense);
+    background-color: var(--clr-pastlue-normal);
 }
 
 .about-me {
@@ -57,6 +57,7 @@
 
 .about-me p {
     margin-top: 20px;
+    font-size: 20px;
 }
 
 @media (max-width: 800px) {
