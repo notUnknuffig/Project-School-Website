@@ -14,26 +14,24 @@
 .grid-container {
     padding: 5%;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 2fr 1fr;
     gap: 5%;
 }
 
 .grid-item {
-    color: white;
     padding: 5%;
-    border: 5px solid var(--clr-pastlue-intense);
     border-radius: 15px;
-    background-color: var(--clr-pastlue-normal);
+    box-shadow: 0px 0px 15px var(--clr-pastlue-normal);
 }
 
 .about-me {
+    background-color: var(--clr-pastlue-normal);
+    color: var(--clr-main);
     max-width: 60svw;
-}
-
-.img-container {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 6fr 2fr;
     align-items: center;
+    justify-content: center;
 }
 
 .about-me-image {
@@ -48,16 +46,36 @@
 }
 
 .about-me h1 {
+    text-align: center;
     width: fit-content;
-    flex-shrink: 1;
     font-weight: 300;
     font-size: 90px;
-    margin-bottom: 20px;
 }
 
 .about-me p {
-    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: -1;
     font-size: 20px;
+}
+
+.social-icon {
+    padding: 10px;
+    width: 70px;
+}
+
+.social-media p {
+    font-size: 20px;
+}
+
+.social-media a {
+    text-decoration: underline;
+    color: var(--clr-pastlue-text);
+    transition: all 0.2s;
+}
+
+.social-media a:hover {
+    color: var(--clr-main);
+    text-shadow: 0px 0px 10px var(--clr-main);
 }
 
 @media (max-width: 800px) {
