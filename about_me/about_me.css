@@ -1,5 +1,34 @@
+:root {
+    /*Pastel Blue Combination: pastlue*/
+    --clr-pastlue-background: hsl(180, 100%, 99%);
+    --clr-pastlue-normal: #c3eeec;
+    --clr-pastlue-intense: #9bd4dc;
+    --clr-pastlue-accent: #59969c;
+    --clr-pastlue-text: #11474d;
+    --clr-pastlue-overlay: #CBF1F578;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /*Pastel Blue Combination: pastlue*/
+        --clr-pastlue-background: #06262e;
+        --clr-pastlue-normal: #217c8a;
+        --clr-pastlue-intense: #1f6f78;
+        --clr-pastlue-accent: #3db6c4;
+        --clr-pastlue-text: #d0eeec;
+        --clr-pastlue-overlay: #45ecff78;
+    }
+    #tab-1 img {
+        content:url("../img/LightGithub.svg");
+    }
+    #tab-2 img {
+        content:url("../img/LightLinkedServices.svg");
+    }
+}
+
 .menu-item-container {
     background-color: var(--clr-pastlue-normal);
+    box-shadow: 0 0px 15px var(--clr-pastlue-normal);
 }
 
 .content {
@@ -9,12 +38,14 @@
     align-items: center;
     width: 100svw;
     height: 100svh;
+    padding-inline: 5%;
 }
 
 .grid-container {
     padding: 5%;
+    max-width: 1800px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     gap: 5%;
 }
 
@@ -27,7 +58,6 @@
 .about-me {
     background-color: var(--clr-pastlue-normal);
     color: var(--clr-main);
-    max-width: 60svw;
     display: grid;
     grid-template-columns: 6fr 2fr;
     align-items: center;
@@ -58,34 +88,149 @@
     font-size: 20px;
 }
 
+/*---------------------Social Media-------------------------*/
+
+.social-container {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 4em 1fr;
+}
+
+.social-media {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    padding: 15px;
+    background-color: var(--clr-pastlue-normal);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px var(--clr-pastlue-normal);
+}
+
+.link-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.link-container p {
+    flex-shrink: 1;
+    width: 50%;
+}
+
+.link-pfp-container {
+    height: 10em;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border: 3px solid var(--clr-main);
+    border-radius: 50%;
+}
+#Github-PfP {
+    background-image: url("../img/GitHubPfP.jpg");
+    background-size: cover;
+}
+#Other-PfP {
+    background-image: url("../img/GitHubPfP.jpg");
+    background-size: cover;
+}
+#Stuff-PfP {
+    background-image: url("../img/GitHubPfP.jpg");
+    background-size: cover;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0px;
+}
+
+.social-list li {
+    width: fit-content;
+}
+
+.active-pannel {
+    animation: tabSwapIn 1.5s ease;
+}
+
+@keyframes tabSwapIn {
+    0% {
+        height: 25px;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+
 .social-icon {
     padding: 10px;
-    width: 70px;
+    padding-bottom: 25px;
+    width: 4em;
+}
+
+.active-tab img {
+    box-shadow: 0px 0px 15px var(--clr-pastlue-normal);
+    border-radius: 15px;
+    background-color: var(--clr-pastlue-normal);
+}
+
+.active-tab {
+    position: relative;
+}
+
+.active-tab::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    box-shadow: 5px 5px 0 5px var(--clr-pastlue-normal);
+    border-radius: 0 0 100vw 0;
+    top: -17px;
+    left: -20px;
+}
+
+.active-tab::after {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 0 0 0 100vw;
+    box-shadow: -5px 5px 0 5px var(--clr-pastlue-normal);
+    top: -17px;
+    right: -20px;
 }
 
 .social-media p {
     font-size: 20px;
+    color: var(--clr-main);
 }
 
 .social-media a {
     text-decoration: underline;
-    color: var(--clr-pastlue-text);
+    color: var(--clr-main);
     transition: all 0.2s;
 }
 
 .social-media a:hover {
-    color: var(--clr-main);
-    text-shadow: 0px 0px 10px var(--clr-main);
+    color: var(--clr-pastlue-text);
+    text-shadow: 0px 0px 10px var(--clr-pastlue-text);
 }
+/*---------------------Inside Social Media-------------------------*/
 
 @media (max-width: 800px) {
     .grid-container {
         padding: 0%;
         grid-template-columns: auto;
-    }
-    .about-me {
-        max-width: none;
-        width: 90svw;
     }
     .about-me-text {
         top: 0px;

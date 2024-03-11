@@ -16,24 +16,9 @@
 
     /*Color*/
     --clr-main: white;
-    --clr-unselected: #eaeaea;
+    --clr-unselected: #f4f4f4;
     --clr-shadow: rgba(0, 0, 0, 0.1);
 
-    /*Pastel Purple Combination: pastpel */
-    --clr-pastpel-background: hsl(282, 100%, 99%);
-    --clr-pastpel-normal: #f1daff;
-    --clr-pastpel-intense: hwb(280 80% 0%);
-    --clr-pastpel-accent: #de9fff;
-    --clr-pastpel-text: #8571a8;
-    --clr-pastpel-overlay: #d9bae978;
-
-    /*Pastel Blue Combination: pastlue*/
-    --clr-pastlue-background: hsl(180, 100%, 99%);
-    --clr-pastlue-normal: #c3eeec;
-    --clr-pastlue-intense: #9bd4dc;
-    --clr-pastlue-accent: #59969c;
-    --clr-pastlue-text: #11474d;
-    --clr-pastlue-overlay: #CBF1F578;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,22 +28,6 @@
         --clr-home-background: hsl(var(--value-clr), 30%, 10%);
     
         --clr-shadow: rgba(0, 0, 0, 0.5);
-
-        /*Pastel Purple Combination: pastpel */
-        --clr-pastpel-background: #241b35;
-        --clr-pastpel-normal: #997fb3;
-        --clr-pastpel-intense: #8571a8;
-        --clr-pastpel-accent: #4d3762;
-        --clr-pastpel-text: #f1daff;
-        --clr-pastpel-overlay: #8571a896;
-
-        /*Pastel Blue Combination: pastlue*/
-        --clr-pastlue-background: #06262e;
-        --clr-pastlue-normal: #217c8a;
-        --clr-pastlue-intense: #1f6f78;
-        --clr-pastlue-accent: #3db6c4;
-        --clr-pastlue-text: #d0eeec;
-        --clr-pastlue-overlay: #45ecff78;
     }       
 }
 

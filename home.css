@@ -19,6 +19,7 @@ section {
 .menu-item-container {
     background-color: var(--clr-home-menubar);
     transform: translateY(calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0)));
+    box-shadow: 0 0px 15px var(--clr-home-menubar);
 }
 
 .section-1 {
@@ -137,13 +138,19 @@ section {
 }
 
 .section-2 .headline a {
+    display: inline-block;
+    margin-top: 15px;
     background-color: var(--clr-home-background-accent);
-    padding: 10px 15px 10px 15px;
+    padding: 5px 15px 5px 15px;
     border-radius: 10px;
     color: var(--clr-main);
     line-height: 2;
     font-size: 30px;
     text-decoration: none;
+}
+
+.section-2 .headline a:hover {
+    box-shadow: 0px 0px 15px var(--clr-main);
 }
 
 .section-3 {

@@ -1,3 +1,25 @@
+:root {
+    /*Pastel Purple Combination: pastpel */
+    --clr-pastpel-background: hsl(282, 100%, 99%);
+    --clr-pastpel-normal: #f1daff;
+    --clr-pastpel-intense: hwb(280 80% 0%);
+    --clr-pastpel-accent: #de9fff;
+    --clr-pastpel-text: #8571a8;
+    --clr-pastpel-overlay: #d9bae978;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /*Pastel Purple Combination: pastpel */
+        --clr-pastpel-background: #241b35;
+        --clr-pastpel-normal: #997fb3;
+        --clr-pastpel-intense: #8571a8;
+        --clr-pastpel-accent: #4d3762;
+        --clr-pastpel-text: #f1daff;
+        --clr-pastpel-overlay: #8571a896;
+    }
+}
+
 body {
     background-color: var(--clr-pastpel-background);
 }
@@ -14,6 +36,7 @@ p {
 
 .menu-item-container {
     background-color: var(--clr-pastpel-normal);
+    box-shadow: 0 0px 15px var(--clr-pastpel-normal);
 }
 
 body {
