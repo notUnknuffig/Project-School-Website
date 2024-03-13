@@ -31,18 +31,10 @@
     box-shadow: 0 0px 15px var(--clr-pastlue-normal);
 }
 
-.content {
-    background-color: var(--clr-pastlue-background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100svw;
-    height: 100svh;
-    padding-inline: 5%;
-}
-
 .grid-container {
-    padding: 5%;
+    background-color: var(--clr-pastlue-background);
+    padding-inline: 5%;
+    padding-block: 5em;
     max-width: 1800px;
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -229,7 +221,8 @@
 
 @media (max-width: 800px) {
     .grid-container {
-        padding: 0%;
+        padding: 2%;
+        padding-bottom: 3em;
         grid-template-columns: auto;
     }
     .about-me-text {
