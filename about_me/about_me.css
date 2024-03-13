@@ -37,7 +37,8 @@
     justify-content: center;
     align-items: center;
     width: 100svw;
-    height: 100svh;
+    min-height: 100svh;
+    height: calc(fit-content + 10em);
     padding-inline: 5%;
 }
 
@@ -92,8 +93,9 @@
 
 .social-container {
     position: relative;
-    min-height: 300px;
-    overflow: hidden;
+    /* min-height: 300px; */
+    min-height: calc(5% + fit-content);
+    /* overflow: hidden; */
     display: grid;
     grid-template-rows: 4em 1fr;
 }
@@ -121,7 +123,7 @@
 
 .link-container p {
     flex-shrink: 1;
-    width: 50%;
+    width: 80%;
 }
 
 .link-pfp-container {
@@ -159,12 +161,25 @@
     animation: tabSwapIn 1.5s ease;
 }
 
+.active-pannel * { 
+    animation: tabFadeIn 1.0s ease;
+}
+
 @keyframes tabSwapIn {
     0% {
         height: 25px;
     }
     100% {
         height: 100%;
+    }
+}
+
+@keyframes tabFadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
     }
 }
 

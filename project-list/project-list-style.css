@@ -141,7 +141,8 @@ body {
     pointer-events: all;
     padding: 50px;
     display: none;
-    border: 5px solid var(--clr-pastpel-intense);
+    box-shadow: 0px 0px 20px var(--clr-pastpel-accent);
+    border: 2px solid var(--clr-pastpel-intense);
     border-radius: 15px;
     background-color: var(--clr-pastpel-normal);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

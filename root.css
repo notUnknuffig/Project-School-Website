@@ -27,6 +27,8 @@
         --clr-home-background-accent: hsl(var(--value-clr), 30%, 40%);
         --clr-home-background: hsl(var(--value-clr), 30%, 10%);
     
+
+        --clr-unselected: #d6d6d6;
         --clr-shadow: rgba(0, 0, 0, 0.5);
     }       
 }
