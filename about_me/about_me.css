@@ -33,21 +33,18 @@
 
 body {
     background-color: var(--clr-pastlue-background);
-
-}
-
-.content {
     display: flex;
-    width: 100%;
-    min-height: 100svh;
     align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .grid-container {
+    position:relative;
     display: grid;
     justify-content: center;
+    height: 100%;
     align-items: center;
-    height: calc(fit-content + 10em);
     padding-inline: 5%;
     padding-block: 5em;
     max-width: 1800px;
@@ -93,8 +90,6 @@ body {
     grid-column-end: -1;
     font-size: 20px;
 }
-
-/*---------------------Social Media-------------------------*/
 
 .social-container {
     position: relative;
@@ -248,13 +243,13 @@ body {
 /*---------------------Inside Social Media-------------------------*/
 
 @media (max-width: 800px) {
+    .content {
+        height: 100%;
+    }
     .grid-container {
         padding: 2%;
         padding-bottom: 3em;
         grid-template-columns: auto;
-    }
-    .about-me-text {
-        top: 0px;
     }
     .img-container {
         justify-content: space-between;
