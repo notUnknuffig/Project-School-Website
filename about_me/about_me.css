@@ -37,14 +37,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+}
+
+.content {
+    height: 100svh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid-container {
     position:relative;
     display: grid;
     justify-content: center;
-    height: 100%;
     align-items: center;
     padding-inline: 5%;
     padding-block: 5em;

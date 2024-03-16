@@ -18,10 +18,10 @@
     /*Color*/
     --clr-main: white;
     --clr-unselected: #f4f4f4;
+    --clr-general-no-intense: #bcbcbc;
     --clr-general-normal: #eaeaea;
     --clr-general-intense: #d1d1d1;
     --clr-shadow: rgba(0, 0, 0, 0.1);
-
 }
 
 [data-theme="dark"] {
@@ -29,7 +29,8 @@
     --clr-home-menubar: hsl(var(--value-clr), 30%, 50%);
     --clr-home-background-accent: hsl(var(--value-clr), 30%, 40%);
     --clr-home-background: hsl(var(--value-clr), 30%, 10%);
-
+    
+    --clr-general-no-intense: #000000;
     --clr-unselected: #d6d6d6;
     --clr-general-normal: #292929;
     --clr-general-intense: #4e4e4e;

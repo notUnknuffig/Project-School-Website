@@ -115,7 +115,7 @@
 }
 
 .theme-swapper-container {
-    background-color: var(--clr-shadow);
+    background-color: var(--clr-general-no-intense);
     position: fixed;
     z-index: 10;
     bottom: 0;
@@ -131,6 +131,47 @@
     transition: 0.3s;
 }
 
+.theme-swapper-container::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 0 0 100vw 0;
+    box-shadow: 5px 5px 0 5px var(--clr-general-no-intense);
+    transform: translateY(-40px);
+    bottom: 0px;
+    left: -20px;
+    transition: 0.3s;
+}
+
+.theme-swapper-container::after {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 0 0 0 100vw;
+    box-shadow: -5px 5px 0 5px var(--clr-general-no-intense);
+    transform: translateY(-40px);
+    bottom: 0px;
+    right: -20px;
+    transition: 0.3s;
+}
+
+.theme-swapper-container:has(:focus)::after,
+.theme-swapper-container:hover::after {
+    box-shadow: -5px 5px 0 5px var(--clr-general-normal);
+    transform: translateY(0px);
+}
+
+.theme-swapper-container:has(:focus)::before,
+.theme-swapper-container:hover::before {
+    box-shadow: 5px 5px 0 5px var(--clr-general-normal);
+    transform: translateY(0px);
+}
+
 .theme-swapper-container:hover, .theme-swapper-container:has(:focus) {
     transform: translateY(0px);
     background-color: var(--clr-general-normal);
@@ -142,6 +183,7 @@
     font-size: 20px;
     font-weight: 700;
     color: var(--clr-main);
+    cursor: default;
 }
 
 .switch {
@@ -187,12 +229,4 @@
 
 .checkbox:checked + .slider:before {
   transform: translateX(30px);
-}
-
-.checkbox:checked +  html {
-    color-scheme: dark;
-}
-
-.checkbox:not(:checked) + html {
-    color-scheme: light;
 }
