@@ -11,9 +11,6 @@
     --img-exit-icon: url("../img/exit-icon.svg");
 
     color-scheme: light;
-    --clr-home-menubar: hsl(var(--value-clr), 30%, 65%);
-    --clr-home-background-accent: hsl(var(--value-clr), 30%, 68%);
-    --clr-home-background: hsl(var(--value-clr), 30%, 75%);
 
     /*Color*/
     --clr-main: white;
@@ -26,9 +23,6 @@
 
 [data-theme="dark"] {
     color-scheme: dark;
-    --clr-home-menubar: hsl(var(--value-clr), 30%, 50%);
-    --clr-home-background-accent: hsl(var(--value-clr), 30%, 40%);
-    --clr-home-background: hsl(var(--value-clr), 30%, 10%);
     
     --clr-general-no-intense: #000000;
     --clr-unselected: #d6d6d6;

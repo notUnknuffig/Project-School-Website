@@ -11,7 +11,7 @@
 [data-theme="dark"] {
     color-scheme: dark;
     /*Pastel Blue Combination: pastlue*/
-    --clr-pastlue-background: #06262e;
+    --clr-pastlue-background: #031519;
     --clr-pastlue-normal: #217c8a;
     --clr-pastlue-intense: #1f6f78;
     --clr-pastlue-accent: #3db6c4;
@@ -119,17 +119,20 @@ body {
 .link-container {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
     align-items: center;
+    justify-items: center;
     text-align: center;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
 .link-container p {
-    flex-shrink: 1;
     width: 80%;
+}
+
+.link-container h2 {
+    color: var(--clr-main);
+    font-size: 30px;
 }
 
 .link-pfp-container {
