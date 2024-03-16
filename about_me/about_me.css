@@ -8,22 +8,23 @@
     --clr-pastlue-overlay: #CBF1F578;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        /*Pastel Blue Combination: pastlue*/
-        --clr-pastlue-background: #06262e;
-        --clr-pastlue-normal: #217c8a;
-        --clr-pastlue-intense: #1f6f78;
-        --clr-pastlue-accent: #3db6c4;
-        --clr-pastlue-text: #d0eeec;
-        --clr-pastlue-overlay: #45ecff78;
-    }
-    #tab-1 img {
-        content:url("../img/LightGithub.svg");
-    }
-    #tab-2 img {
-        content:url("../img/LightLinkedServices.svg");
-    }
+[data-theme="dark"] {
+    color-scheme: dark;
+    /*Pastel Blue Combination: pastlue*/
+    --clr-pastlue-background: #06262e;
+    --clr-pastlue-normal: #217c8a;
+    --clr-pastlue-intense: #1f6f78;
+    --clr-pastlue-accent: #3db6c4;
+    --clr-pastlue-text: #d0eeec;
+    --clr-pastlue-overlay: #45ecff78;
+}
+
+[data-theme="dark"] #tab-1 img {
+    content:url("../img/LightGithub.svg");
+}
+
+[data-theme="dark"] #tab-2 img {
+    content:url("../img/LightLinkedServices.svg");
 }
 
 .menu-item-container {
