@@ -1,3 +1,11 @@
+:root {
+    --img-theme-switch: url('../img/Sun.svg');
+}
+
+[data-theme=dark] {
+    --img-theme-switch: url('../img/Moon.svg');
+}
+
 .menu {
     pointer-events: all;
     z-index: 10;
@@ -119,7 +127,7 @@
     position: fixed;
     z-index: 10;
     bottom: 0;
-    right: 10%;
+    right: 5%;
     height: 70px;
     width: 100px;
     display: flex;
@@ -211,22 +219,25 @@
   transition: .4s;
 }
 
-.slider:before {
+.slider img {
+    content: var(--img-theme-switch);
     position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
+    width: 26px;
+    height: 26px;
+    bottom: 1px;
+    left: 2px;
     border-radius: 50%;
-    background-color: var(--clr-main);
     transition: .4s;
 }
 
-.checkbox:focus + .slider {
+/*.slider:before {
+    background-color: var(--clr-main);
+}*/
+
+.checkbox:focus + .slider img {
   box-shadow: 0 0 3px var(--clr-main);
 }
 
-.checkbox:checked + .slider:before {
+.checkbox:checked + .slider img {
   transform: translateX(30px);
 }

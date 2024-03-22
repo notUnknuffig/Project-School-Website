@@ -1,18 +1,20 @@
 :root {
     --menu-scroll: calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0));
-    --title-characters: 14;
+    --title-characters: 15;
     --img-menu-icon: url("img/menu-icon.svg");
     --img-exit-icon: url("img/exit-icon.svg");
     --clr-home-menubar: hsl(var(--value-clr), 30%, 65%);
     --clr-home-background-accent: hsl(var(--value-clr), 100%, 30%);
-    --clr-home-background: hsl(var(--value-clr), 30%, 75%);
+    --clr-home-background: hsl(var(--value-clr), 30%, 95%);
+    --clr-home-text: hsl(var(--value-clr), 30%, 25%);
 }
 
 [data-theme="dark"] {
     color-scheme: dark;
     --clr-home-menubar: hsl(var(--value-clr), 30%, 50%);
     --clr-home-background-accent: hsl(var(--value-clr), 100%, 70%);
-    --clr-home-background: hsl(var(--value-clr), 30%, 10%);
+    --clr-home-background: hsl(var(--value-clr), 30%, 5%);
+    --clr-home-text: hsl(var(--value-clr), 30%, 90%);
 }
 
 body {
@@ -46,7 +48,7 @@ section {
     font-optical-sizing: auto;
     font-weight: 700;
     font-size: calc(min(8svw, 100px));
-    color: var(--clr-main);
+    color: var(--clr-home-text);
     position: relative;
     animation: move-title 0.5s ease 4s forwards;
 }
@@ -67,14 +69,14 @@ section {
 
 .section-1 h1::after {
     width: 1.5%;
-    background-color: var(--clr-main);
+    background-color: var(--clr-home-text);
     animation: typewriter 2s steps(var(--title-characters)) 1s forwards, typewriter-blink 0.6s steps(1) 0s infinite, blend-in 0.2s 5s reverse forwards;
 }
 
 .section-1 p {
     opacity: 0%;
     text-align: center;
-    color: var(--clr-main);
+    color: var(--clr-home-text);
     width: calc(min(900px, 80%));
     font-size: calc(min(3.2svw, 40px));
     animation: blend-in 0.4s ease 4.5s forwards;
@@ -129,11 +131,11 @@ section {
 }
 
 .section-2 h1 {
-    color: var(--clr-main);
+    color: var(--clr-home-text);
 }
 
 .section-2 p {
-    color: var(--clr-main);
+    color: var(--clr-home-text);
 }
 
 .section-2 .image-container {
@@ -166,7 +168,7 @@ section {
 }
 
 .section-2 .headline a:hover {
-    box-shadow: 0px 0px 15px var(--clr-main);
+    box-shadow: 0px 0px 15px var(--clr-home-text);
 }
 
 .section-3 {

@@ -2,8 +2,8 @@
     color-scheme: light;
     /*Pastel Purple Combination: pastpel */
     --clr-pastpel-background: hsl(282, 100%, 99%);
-    --clr-pastpel-normal: #f1daff;
-    --clr-pastpel-intense: hwb(280 80% 0%);
+    --clr-pastpel-normal: #ebcbff;
+    --clr-pastpel-intense: #e7b6ff;
     --clr-pastpel-accent: #de9fff;
     --clr-pastpel-text: #8571a8;
     --clr-pastpel-overlay: #d9bae978;
@@ -12,11 +12,11 @@
 [data-theme="dark"] {
     color-scheme: dark;
     /*Pastel Purple Combination: pastpel */
-    --clr-pastpel-background: #241b35;
-    --clr-pastpel-normal: #997fb3;
-    --clr-pastpel-intense: #8571a8;
-    --clr-pastpel-accent: #4d3762;
-    --clr-pastpel-text: #f1daff;
+    --clr-pastpel-background: #0a0611;
+    --clr-pastpel-normal: #73478f;
+    --clr-pastpel-intense: #8255a2;
+    --clr-pastpel-accent: #865faa;
+    --clr-pastpel-text: #f1dbff;
     --clr-pastpel-overlay: #8571a896;
 }
 
@@ -37,7 +37,7 @@ p {
 
 .menu-item-container {
     background-color: var(--clr-pastpel-normal);
-    box-shadow: 0 0px 15px var(--clr-pastpel-normal);
+    box-shadow: 0 0px 15px var(--clr-pastpel-intense);
 }
 
 body {
@@ -103,14 +103,14 @@ body {
     grid-area: project-3;
 }
 
-.project-3 .extendable {
-    margin-top: 20px;
+.project-2 .extendable {
+    margin-block: 20px;
     display: grid;
     grid-template-rows: 1;
     gap: 10px;
 }
 
-.project-3 .extendable button {
+.project-2 .extendable button {
     /* padding: 15px; */
     text-align: center;
     cursor: pointer;
@@ -125,7 +125,7 @@ body {
     border-radius: 20px;
 }
 
-.project-3 .extendable button:hover {
+.project-2 .extendable button:hover {
     background-color: var(--clr-pastpel-accent);
 }
 

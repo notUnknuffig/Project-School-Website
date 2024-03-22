@@ -27,7 +27,7 @@
         <p>:::</p>
         <label class="switch">
             <input class="checkbox" type="checkbox" onchange="setTheme()" id="theme-switch">
-            <span class="slider"></span>
+            <span class="slider"><img src="img/Sun.svg"></span>
           </label>
     </div>
     <script src="../menu/menu.js"></script>
@@ -74,18 +74,25 @@
                 <img src="../img/Projekt-A.png" alt="Pixelart Flügel">
             </div>
             <div class="project-2 project-grid-item">
-                <h2>Projekt-R</h2>
-                <p>In diesem Projekt verwenden wir einen Raspberry Pi und Python, um eine Roboterarm zu steuern. Der Roboterarm verfügt über 3-Freiheitsgrade und einen Finray-Greifmechanismus. Ein Bildanalyse Programm verarbeitet die eingaben einer Kamera, um die Position des zu greifenden Objekts zu erkennen. Um den Roboter zu bewegen, berechnen wir mit Hilfe von Inverser Kinematik, die Motorpositionen.</p>
-                <div class="project-2-image"></div>
-            </div>
-            <div class="project-3 project-grid-item">
                 <h2>Projekt-Util</h2>
-                <p>Projekt-Util ist eine Reihe an Programmen. Sie umfasst Großzahl an nützlichen und auch weniger nützlichen Werkzeugen. Ein Beispiel hierfür ist ein Python Programm, welches den Aufbau und Strukturierung von JSON-Dateien vereinfacht.</p>
+                <p>Projekt-Util ist eine Reihe an Programmen. Sie umfasst Großzahl an nützlichen und auch weniger nützlichen Werkzeugen. Ein Beispiel hierfür ist ein Python Programm, welches den Aufbau und Strukturierung von JSON-Dateien vereinfacht. Die meisten Programme die innerhalb dieses Projekts liegen, sind erstellt worden, um mir neues Wissen anzuzeigen oder mir eine Herrausvorderung zu stellen.</p>
                 <div class="extendable">
                     <button windowState="open" windowID="popup-tri-calc" onclick="windowDisplay(this.id)" id="tri-calc-open"><span class="unclickable-button">Dreiecksrechner</span></button>
                     <button windowState="open" windowID="popup-json-reader" onclick="windowDisplay(this.id)" id="json-reader-open"><span class="unclickable-button">JSON-Editor</span></button>
                     <button windowState="open" windowID="popup-color-conv" onclick="windowDisplay(this.id)" id="color-conv-open"><span class="unclickable-button">Farbkonverter</span></button>
                 </div>
+                <p>Was in zukunft zu diesem Projekt hinzugefügt werden könnte:</p>
+                <ul>
+                    <li>Fertigstellung des JSON-Editors</li>
+                    <li>Erweiterungen des Dreiecksrechners</li>
+                    <li>Eine eigene Version einer Enigma-Maschine</li>
+                    <li>...</li>
+                </ul>
+            </div>
+            <div class="project-3 project-grid-item" id="robot-arm">
+                <h2>Projekt-R</h2>
+                <p>In diesem Projekt verwenden wir einen Raspberry Pi und Python, um eine Roboterarm zu steuern. Der Roboterarm verfügt über 3-Freiheitsgrade und einen Finray-Greifmechanismus. Ein Bildanalyse Programm verarbeitet die eingaben einer Kamera, um die Position des zu greifenden Objekts zu erkennen. Um den Roboter zu bewegen, berechnen wir mit Hilfe von Inverser Kinematik, die Motorpositionen.</p>
+                <div class="project-2-image"></div>
             </div>
             <div class="project-4 project-grid-item">
                 <h2>Projekt-LoL-Randomizer</h2>
