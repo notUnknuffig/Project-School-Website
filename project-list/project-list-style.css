@@ -86,23 +86,6 @@ body {
     color: var(--clr-main);
 }
 
-.project-2-image {
-    border: 5px solid var(--clr-pastpel-accent);
-    background-color: var(--clr-pastpel-intense);
-    margin: 20px;
-    border-radius: 15px;
-    height: 300px;
-    background-position: center;
-    background-size: 700px;
-    background-image: url("../img/RobotorArm.png");
-    
-}
-
-.project-3 {
-    color: var(--clr-pastpel-text);
-    grid-area: project-3;
-}
-
 .project-2 .extendable {
     margin-block: 20px;
     display: grid;
@@ -172,6 +155,24 @@ body {
 
 #popup-json-reader img {
     border-radius: 15px;
+}
+
+.project-3 {
+    color: var(--clr-pastpel-text);
+    grid-area: project-3;
+}
+
+.project-3-image {
+    box-shadow: 0px 0px 15px var(--clr-pastpel-accent);
+    background-color: var(--clr-pastpel-intense);
+    margin-block: 20px;
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-position: center;
+    background-size: 700px;
+    background-image: url("../img/RobotorArm.png");
+    text-align: center;
 }
 
 .project-4 {
