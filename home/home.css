@@ -1,8 +1,8 @@
 :root {
     --menu-scroll: calc(1% * min((max( var(--scroll), 30 ) * 3 - 190), 0));
     --title-characters: 15;
-    --img-menu-icon: url("img/menu-icon.svg");
-    --img-exit-icon: url("img/exit-icon.svg");
+    --img-menu-icon: url("../img/menu-icon.svg");
+    --img-exit-icon: url("../img/exit-icon.svg");
     --clr-home-menubar: hsl(var(--value-clr), 30%, 65%);
     --clr-home-background-accent: hsl(var(--value-clr), 100%, 30%);
     --clr-home-background: hsl(var(--value-clr), 30%, 95%);
@@ -141,7 +141,7 @@ section {
 
 .section-2 .image-container {
     height: 100%;
-    background-image: url("img/RobotorArm.png");
+    background-image: url("../img/RobotorArm.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: calc(100% + 100% * (min( max(var(--scroll) - 60, 0), 40) / 40) - 20vw * (min( max(var(--scroll) - 160, 0), 20) / 20));
@@ -175,6 +175,7 @@ section {
 /*----------------- Section 3 ------------------------*/
 
 .section-3 {
+    opacity: calc(1% * min( ( max( var(--scroll), 150 ) - 150 ) * 100 / 50, 100 ) );
     display: grid;
     padding-inline: 8%;
     grid-template-columns: 2fr 3fr;

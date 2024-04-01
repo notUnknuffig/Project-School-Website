@@ -1,4 +1,4 @@
-:root {
+[data-theme="light"] {
     color-scheme: light;
     /*Pastel Purple Combination: pastpel */
     --clr-pastpel-background: hsl(282, 100%, 99%);
@@ -52,7 +52,7 @@ body {
 
 .project-grid {
     display: grid;
-    grid-template-areas: 'project-1 project-1 project-1 project-3 project-3' 'project-2 project-2 project-2 project-3 project-3' 'project-4 project-4 project-5 project-5 project-5';
+    grid-template-areas: 'project-2 project-2 project-1 project-1 project-1' 'project-2 project-2 project-3 project-3 project-3' 'project-4 project-4 project-3 project-3 project-3' 'project-5 project-5 project-5 project-5 project-5';
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
@@ -82,8 +82,8 @@ body {
 
 .project-2 {
     grid-area: project-2;
-    background-color: var(--clr-pastpel-normal);
-    color: var(--clr-main);
+    background-color: var(--clr-pastpel-background);
+    color: var(--clr-pastpel-text);
 }
 
 .project-2 .extendable {
@@ -104,6 +104,7 @@ body {
     font-weight: 700;
     color: var(--clr-main);
     background-color: var(--clr-pastpel-intense);
+    box-shadow: 0px 0px 7px var(--clr-pastpel-intense);
     border: 0px;
     border-radius: 20px;
 }
@@ -157,6 +158,11 @@ body {
     border-radius: 15px;
 }
 
+#json-reader-open {
+    background-color: var(--clr-pastpel-background);
+    color: var(--clr-pastpel-text);
+}
+
 .project-3 {
     color: var(--clr-pastpel-text);
     grid-area: project-3;
@@ -176,17 +182,18 @@ body {
 }
 
 .project-4 {
-    color: var(--clr-pastpel-text);
+    color: var(--clr-main);
     grid-area: project-4;
+    background-color: var(--clr-pastpel-normal);
 }
 
 .project-4 a {
-    color: var(--clr-pastpel-text);
+    color: var(--clr-main);
 }
 
 .project-4 a:hover {
-    color: var(--clr-pastpel-accent);
-    text-shadow: 0px 0px 10px var(--clr-pastpel-accent);
+    color: var(--clr-main);
+    text-shadow: 0px 0px 10px var(--clr-main);
 
 }
 
@@ -197,7 +204,7 @@ body {
 }
 
 .project-5 a {
-    color: var(--clr-pastpel-text);
+    color: var(--clr-main);
 }
 
 .project-5 a:hover {
@@ -206,7 +213,7 @@ body {
 }
 
 
-@media (max-width:800px) {
+@media (max-width:1000px) {
     .project-grid {
         grid-template-columns: auto;
         grid-template-areas: 'project-1' 'project-2' 'project-3' 'project-4' 'project-5';

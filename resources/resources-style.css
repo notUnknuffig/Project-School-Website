@@ -1,4 +1,5 @@
-:root {
+[data-theme="light"] {
+    color-scheme: light;
     /*Light Blue Combination: liblue */
     --clr-liblue-background: hsl(207, 100%, 98%);
     --clr-liblue-normal: #d4efff;

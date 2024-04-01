@@ -1,6 +1,7 @@
 *, *::after, *::before {
     margin: 0px;
     box-sizing: border-box;
+    transition: color, background-color, box-shadow 0.3s;
 }
 
 :root {

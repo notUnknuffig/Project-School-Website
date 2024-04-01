@@ -1,4 +1,4 @@
-:root {
+[data-theme="light"] {
     /*Pastel Blue Combination: pastlue*/
     --clr-pastlue-background: hsl(180, 100%, 99%);
     --clr-pastlue-normal: #a7e5e2;
@@ -102,6 +102,10 @@ body {
     height: 100%;
     display: grid;
     grid-template-rows: 4em 1fr;
+}
+
+.social-container * {
+    transition: none;
 }
 
 .social-media {
