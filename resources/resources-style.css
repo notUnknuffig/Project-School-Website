@@ -2,9 +2,9 @@
     color-scheme: light;
     /*Light Blue Combination: liblue */
     --clr-liblue-background: hsl(207, 100%, 98%);
-    --clr-liblue-normal: #d4efff;
-    --clr-liblue-intense: #a8d5ff;
-    --clr-liblue-accent: #3cb8ff;
+    --clr-liblue-normal: #c5eaff;
+    --clr-liblue-intense: #89c6ff;
+    --clr-liblue-accent: #16aaff;
     --clr-liblue-text: #094c71;
     --clr-liblue-overlay: #d9f4ff78;
 }
